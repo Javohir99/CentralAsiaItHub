@@ -1,0 +1,140 @@
+@import url(../fonts/fonts.css);
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+}
+/* Header */
+header{
+    margin: auto;
+    width: 80%;
+    font-size: 1.3em;
+    border: 2px #aaa solid;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+h1,h2{
+    font-size: 80px;
+    font-family: 'Morning Breeze';
+    padding: 10px;
+    text-align: center;
+    color: rgb(140, 0, 255);
+}
+header h2{
+    font-size: 60px;
+}
+/*nav*/
+nav>ul>li{
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    width: 50%;
+    list-style: none;
+}
+/*временно*/
+nav ul li:hover{
+    margin: 0;
+}
+nav ul li ul li:hover{
+    padding: 0;
+    font-size: 28px;
+    background-color: blueviolet;
+}
+
+
+nav ul li{
+    display: inline-block;
+}
+.html, .css{
+    width: 100%;
+    display: none;
+    float: left;
+}
+nav ul li ul li{
+    padding: 2px 0;
+    margin: 2px 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+nav ul li:hover > ul {
+    display:block;
+}
+/* временно */
+nav a{
+    border-bottom: 1px rgb(177, 113, 8) solid;
+    padding: 0 20px;
+    text-decoration: none;
+    color:black
+}
+.html{
+    column-count:3;
+}
+.css{
+    column-count: 2;
+}
+/* Main */
+
+main{
+    margin-top: 40px;
+    box-sizing: border-box;
+    min-height: 900px;
+    padding: 20px;
+}
+/* main */
+main{
+    margin: 20px auto;
+    width: 80%;
+    padding: 20px 10px;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+main>p{
+    margin: 20px;
+}
+/*
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: red;
+}
+li{
+    list-style: none;
+}
+nav{
+    background-color: aqua;
+}
+nav>ul>li:hover>.tegs{
+    display: inline-block;
+}
+.tegs{
+    width: 100%;
+    display: none;
+}
+.tegs>li{
+    background-color: aquamarine;
+    width: 90px;
+    padding: 20px;
+    display: inline-block;
+}
+.html:hover>.tegs{
+    display: inline-block;
+}
+main{
+    margin: 20 auto;
+    width: 80%;
+}
+.html,.css{
+    display: inline-block;
+    width: 49%;
+}*/
+
