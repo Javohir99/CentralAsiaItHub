@@ -1,0 +1,9 @@
+.first p{
+    color:green;
+}
+.second .comment b{
+    color:red;
+}
+.second p b{
+    color:blue;
+}

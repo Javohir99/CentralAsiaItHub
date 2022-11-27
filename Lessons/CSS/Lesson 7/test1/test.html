@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST</title>
+    <link rel="stylesheet" href="../../Lesson 6/main.css">
+    <link rel="stylesheet" href="/../Lesson 6/style.css">
+    <style>
+    </style>
+</head>
+<body>
+    <header><h1>Kaskadlash testi</h1></header>
+    <div id="result"></div>
+    
+    <form name="quiz" action="javascript:check();" class="quizform">
+    
+    <div class="quizsection">
+    
+    
+        <h2><span class="selectors"> #photo figure figcaption </span> necha ball bo'ladi?</h2>
+        
+        <div class="answer">
+            <input name="q1" value="A" id="value1" type="radio" checked="checked" /> 1002
+        </div>
+    
+        <div class="answer">
+            <input name="q1" value="B" id="value2" type="radio" /> 102
+        </div>
+    
+        <div class="answer">
+            <input name="q1" value="C" id="value3" type="radio" /> 12
+        </div>
+    
+        <div class="answer">
+            <input name="q1" value="D" id="value4" type="radio" /> 21
+        </div>
+        
+    </div>
+    
+    <div class="quizsection">
+    
+        <h2>"Man qizilman" so'zi qaysi rang bo'ladi ?</h2>
+        <div class="codeblock">
+            <code>
+            <span class="selectors">&lt;head&gt;</span><br>
+            <span class="selectors">&lt;style&gt;</span><br>
+            <span class="selectors">p{</span><br>
+            <span class="atr">color:</span><span class="value">red;</span><br>
+            <span class="atr">color:</span><span class="value">blue;</span><br>
+            <span class="selectors">}</span><br>
+            <span class="selectors">.text{</span><br>
+            <span class="atr">color:</span><span class="value">yellow;</span><br>
+            <span class="selectors">}</span><br>
+            <span class="selectors">&lt/style&gt;</span><br>
+            <span class="selectors">&lt;link</span><span class="atr"> rel=</span><span class="value">"stylesheet" </span><span class="atr">href=</span><span class="value">"style.css"</span><span class="selectors">&gt;</span><br>
+            <div>
+            <b>Style.css ichida</b><br><br>
+            <span class="selectors">p{</span><br>
+            <span class="atr">color:</span><span class="value">green;</span><br>
+            <span class="selectors">}</span><br>
+            </div>
+            <span class="selectors">&lt;/head&gt;</span><br>
+            <span class="selectors">&lt;body&gt;</span><br>
+            <span class="selectors">&lt;p</span><span class="atr"> class=</span><span class="value">"text"</span><span class="selectors">&gt;</span>Man qizilman<span class="selectors">&lt;/p&gt;</span><br>
+            <span class="selectors">&lt;/body&gt;</span>
+            </code>
+        </div>
+        <div class="answer">
+            <input name="q2" value="A" id="value1" type="radio" checked="checked" /> red
+        </div>
+    
+        <div class="answer">
+            <input name="q2" value="B" id="value2" type="radio" /> blue
+        </div>
+    
+        <div class="answer">
+            <input name="q2" value="C" id="value3" type="radio" /> yellow
+        </div>
+    
+        <div class="answer">
+            <input name="q2" value="D" id="value4" type="radio" /> green
+        </div>
+    
+    </div>
+    
+    <div class="quizsection">
+    
+        <h2>Agar <span class="selectors">p</span> ga rangini sariq bergan bo'lsak va uni ichidagiga <span class="selectors">li</span> ramka bersak, uni ichidagi <span class="selectors">a</span> ni shriftшni <b>20px</b> bersak <span class="selectors">a</span> qaysi xususiyatlarni oladi?</h2>
+    
+        <div class="answer">
+            <input name="q3" value="A" id="value1" type="radio" checked="checked" /> rangi sariq boladi qolganlari ishlamidi
+        </div>
+    
+        <div class="answer">
+            <input name="q3" value="B" id="value2" type="radio" /> shrifti 20px va rangi sariq bo'ladi  
+        </div>
+    
+        <div class="answer">
+            <input name="q3" value="C" id="value3" type="radio" /> hamma xusisiyatlar o'tadi
+        </div>
+    
+        <div class="answer">
+            <input name="q3" value="D" id="value4" type="radio" /> faqat shrifti 20px bo'ladi
+        </div>
+    
+    </div>
+    <div>
+    <input value="Finish" type="submit" class="submit">
+</div>
+    </form>
+    
+    </section>
+    
+    <script type="text/javascript">
+           
+       function check()
+    
+       {
+        var result = 0; 
+        var question;
+          
+          
+        question = 0;
+        values = new Array();
+        values = ['B','C','D'];
+        
+          for (question = 1; question <= values.length; question++) {
+                var q = document.forms['quiz'].elements['q'+question];
+                var quizsection = document.body.getElementsByClassName('quizsection');
+                var answer = quizsection[question-1].getElementsByClassName('answer');
+            for (var i = 0; i < q.length; i++) { 
+                if(q[i].checked){
+                        if(q[i].value == values[question-1]){
+                            result = result+1;
+                            answer[i].style.border = "3px green solid"; 
+                        }
+                        else{
+                            answer[i].style.border = "3px red solid";
+                        }
+                    }
+                    else if(q[i].value == values[question-1]){
+                        answer[i].style.border = "3px green solid";
+                    }
+                }
+            }
+            inputs = document.getElementsByTagName("input");
+            divresult = document.getElementById("result");
+            divresult.scrollIntoView();
+            divresult.innerHTML = "Tog'ri javoblar soni:" + result+"/"+values.length;
+            for(i = 0; i <= inputs.length; i++){
+                inputs[i].setAttribute('type', 'hidden');
+            }
+
+            
+            
+
+
+
+
+          
+          /*
+          result = "";
+          trues = 2;  
+          let choice = 0;
+          
+          for (question = 1; question <= 3; question++) {
+          
+             var q = document.forms['quiz'].elements['q'+question];
+    
+                for (var i = 0; i < q.length; i++) {
+                   if (q[i].checked) {
+                      choice = choice + Number(q[i].value);
+                   }
+                }
+             }
+          window.location = 'ocenka' + choice + '.html';*/
+       }
+    
+    // ]]></script>    
+</body>
+</html>

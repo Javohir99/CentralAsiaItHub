@@ -94,6 +94,10 @@ main{
 main>p{
     margin: 20px;
 }
+aside{
+    margin-top: 100px;
+    float:right
+}
 /*
 *{
     margin: 0;
