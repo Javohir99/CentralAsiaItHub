@@ -1,0 +1,86 @@
+div>div{
+    margin: 0 auto;
+    padding: 0;
+    border: 2px solid #a22;
+    border-radius: 0;
+}
+.WandH{
+    width: 400px;
+    height: 60px;
+    padding: 0;
+}
+.untext{
+    width: 50px;
+    height: 60px;
+}
+.boxsize{
+    width: 50px;
+    height: 60px;
+    padding: 20px 300px;
+    margin-bottom: 30px;
+}
+.I300{
+    width: 300px;
+    height: 60px;
+}
+.I300fake{
+    margin-top: 20px;
+    width: 300px;
+    height: 60px;
+    padding: 0 20px;
+}
+.papper,.papperviver{
+    border: 1px white solid;
+    background-color: white;
+    margin-top: 20px;
+    width: 800px;
+    height: 300px;
+}
+papperviver{
+    border: 0;
+}
+.papper>.first{
+    margin: 20px 0 30px 40px;
+    height: 20px;
+    width: 20px;
+    padding: 10px;
+    border: 2px #a22 solid;
+    background-color: blue;
+}
+.papper>.second{
+    margin: 50px 0 50px 20px;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    background-color: black;
+}
+.papperviver>.first{
+    width: 758px;
+    margin: 0;
+    padding: 18px 0 28px 38px;
+    border: 2px #555 dotted;
+    background-color: white;
+}
+.papperviver>.first>div{
+    margin: 0;
+    height: 20px;
+    width: 20px;
+    padding: 10px;
+    border: 2px #a22 solid;
+    background-color: blue;
+}
+.papperviver>.second{
+    width: 778px;
+    background-color: rgba(0, 0, 0, 0);
+    margin: -30px 0 0 0;
+    padding: 48px 0 48px 18px;
+    border: 2px rgba(100, 100, 100, 0.5) dashed;
+}
+.papperviver>.second>div{
+    margin: 0;
+    height: 20px;
+    width: 20px;
+    padding: 10px;
+    border: 2px #a22 solid;
+    background-color: black;
+}

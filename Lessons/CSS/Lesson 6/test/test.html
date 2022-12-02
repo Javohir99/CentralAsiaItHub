@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEST</title>
-    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../../Lesson 6/main.css">
+    <link rel="stylesheet" href="/../Lesson 6/style.css">
+    <style>
+    </style>
 </head>
 <body>
     <header><h1>Kaskadlash testi</h1></header>
-
+    <div id="result"></div>
     
     <form name="quiz" action="javascript:check();" class="quizform">
     
@@ -19,19 +22,19 @@
         <h2><span class="selectors"> #photo figure figcaption </span> necha ball bo'ladi?</h2>
         
         <div class="answer">
-            <input name="q1" value="0" id="value1" type="radio" checked="checked" /> 1002
+            <input name="q1" value="A" id="value1" type="radio" checked="checked" /> 1002
         </div>
     
         <div class="answer">
-            <input name="q1" value="1" id="value2" type="radio" /> 102
+            <input name="q1" value="B" id="value2" type="radio" /> 102
         </div>
     
         <div class="answer">
-            <input name="q1" value="0" id="value3" type="radio" /> 12
+            <input name="q1" value="C" id="value3" type="radio" /> 12
         </div>
     
         <div class="answer">
-            <input name="q1" value="0" id="value4" type="radio" /> 21
+            <input name="q1" value="D" id="value4" type="radio" /> 21
         </div>
         
     </div>
@@ -65,19 +68,19 @@
             </code>
         </div>
         <div class="answer">
-            <input name="q2" value="0" id="value1" type="radio" checked="checked" /> red
+            <input name="q2" value="A" id="value1" type="radio" checked="checked" /> red
         </div>
     
         <div class="answer">
-            <input name="q2" value="0" id="value2" type="radio" /> blue
+            <input name="q2" value="B" id="value2" type="radio" /> blue
         </div>
     
         <div class="answer">
-            <input name="q2" value="1" id="value3" type="radio" /> yellow
+            <input name="q2" value="C" id="value3" type="radio" /> yellow
         </div>
     
         <div class="answer">
-            <input name="q2" value="0" id="value4" type="radio" /> green
+            <input name="q2" value="D" id="value4" type="radio" /> green
         </div>
     
     </div>
@@ -87,19 +90,19 @@
         <h2>Agar <span class="selectors">p</span> ga rangini sariq bergan bo'lsak va uni ichidagiga <span class="selectors">li</span> ramka bersak, uni ichidagi <span class="selectors">a</span> ni shriftшni <b>20px</b> bersak <span class="selectors">a</span> qaysi xususiyatlarni oladi?</h2>
     
         <div class="answer">
-            <input name="q3" value="0" id="value1" type="radio" checked="checked" /> rangi sariq boladi qolganlari ishlamidi
+            <input name="q3" value="A" id="value1" type="radio" checked="checked" /> rangi sariq boladi qolganlari ishlamidi
         </div>
     
         <div class="answer">
-            <input name="q3" value="0" id="value2" type="radio" /> shrifti 20px va rangi sariq bo'ladi  
+            <input name="q3" value="B" id="value2" type="radio" /> shrifti 20px va rangi sariq bo'ladi  
         </div>
     
         <div class="answer">
-            <input name="q3" value="0" id="value3" type="radio" /> hamma xusisiyatlar o'tadi
+            <input name="q3" value="C" id="value3" type="radio" /> hamma xusisiyatlar o'tadi
         </div>
     
         <div class="answer">
-            <input name="q3" value="1" id="value4" type="radio" /> faqat shrifti 20px bo'ladi
+            <input name="q3" value="D" id="value4" type="radio" /> faqat shrifti 20px bo'ladi
         </div>
     
     </div>
@@ -111,23 +114,53 @@
     </section>
     
     <script type="text/javascript">
-    
-       var result;
-       
+           
        function check()
     
        {
-    
-          var question;
-          var value1;
-          var value2;
+        var result = 0; 
+        var question;
           
           
-          question = 1;
-          value1 = 0;
-          value2 = 0;
+        question = 0;
+        values = new Array();
+        values = ['B','C','D'];
+        
+          for (question = 1; question <= values.length; question++) {
+                var q = document.forms['quiz'].elements['q'+question];
+                var quizsection = document.body.getElementsByClassName('quizsection');
+                var answer = quizsection[question-1].getElementsByClassName('answer');
+            for (var i = 0; i < q.length; i++) { 
+                if(q[i].checked){
+                        if(q[i].value == values[question-1]){
+                            result = result+1;
+                            answer[i].style.border = "3px green solid"; 
+                        }
+                        else{
+                            answer[i].style.border = "3px red solid";
+                        }
+                    }
+                    else if(q[i].value == values[question-1]){
+                        answer[i].style.border = "3px green solid";
+                    }
+                }
+            }
+            inputs = document.getElementsByTagName("input");
+            divresult = document.getElementById("result");
+            divresult.scrollIntoView();
+            divresult.innerHTML = "Tog'ri javoblar soni:" + result+"/"+values.length;
+            for(i = 0; i <= inputs.length; i++){
+                inputs[i].setAttribute('type', 'hidden');
+            }
+
+            
+            
+
+
+
+
           
-          
+          /*
           result = "";
           trues = 2;  
           let choice = 0;
@@ -142,7 +175,7 @@
                    }
                 }
              }
-          window.location = 'ocenka' + choice + '.html';
+          window.location = 'ocenka' + choice + '.html';*/
        }
     
     // ]]></script>    

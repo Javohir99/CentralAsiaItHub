@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .first p{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>Meroslik praktikasi</header>
+    <div class="first">
+        <p style="color:red;"><i>P</i> elementiga <b>&lt;p style="color:red;"&gt;</b> berilgan, <i>head</i>ni ichida esa <b>&lt;style&gt;p{color:blue;}&lt;/style&gt;</b> qo'yilgan va undan tashqari, tashqi fayl qilib <i>p</i> elementiga <i>link</i> orqali <b>&lt;link rel="stylesheet" href="style.css" p{color:green;}</b> berilgan. Lekin eng yaqin element ta'sir ko'rsatib bu yozuv qizil ko'rinmoqda</p>
+    </div>
+    <div class="first">
+        <p>Bu yerda tepadigidek blok qilingan. Faqatgina farqi <i>p</i> ichida style atributi o'chirilgan, rangi ko'kka almashtirilgan( <i>&lt;style&gt;</i> tegini ichidigi ishlayapti).<i>style</i> tegini ichiga yozilgan narsalar birinchi keladi deb o'ylashingiz mumkin,lekin unday emas! <i>link</i> ichida va <i>style</i> tegi ichida yozilgan narsalar bir xil darajada turadi, faqatgina kod ketma-ketligi har xil, <i>link</i> birinchi yozilgan, <i>style</i> esa keyin. <strong>Ohirgi yozilgan qonun ko'proq ta'sir o'tkazadi!</strong></i></p>
+    </div>
+    <div class="second">
+        <p class="comment"><i>P</i> tegiga class berilgan <b>&lt;p class="comment"&gt;</b> uni ichidigi <i>b</i> ni rangini ikki martta o'zgartirilgan <i>css</i> kod quydagicha:</p>
+            <div class="codeblock">
+                <code><span class="selectors">.comment b</span>{<br>
+                    <span class="atr">color</span>:<span class="value">red;</span><br>
+                }<br>
+                <span class="selectors">p b</span>{<br>
+                    <span class="atr">color</span>:<span class="value">blue;</span><br>
+                }<br>
+                </code>
+            </div>
+            <p class="comment">
+            ushbu kodda birinchi qizil va <em>undan keyin</em> ko'k rangi berilyapti Ammo <b>b</b> qizil rangda yozilyapti? Qanday qilib?<br>
+            Chunki oddiy tegni chaqirishdan ko'ra <i>class</i> orqali chaqirtirish <strong>yuqoriroq o'rin egallaydi!</strong>
+        </p>
+    </div>
+    <div>
+        <p>Tepada ko'rsatilganidak <i>class</i> <i>teg</i>dan muhimroq ekan, lekin <i>id</i> chi yoki ikki martta <i>class</i> orqali kirilgan bo'lsachi? </p>
+        <p>Quyidagi muamolar uchun ballar sistemasi yaratilingan</p>
+        <ul>
+            <li>teg - 1</li>
+            <li>class - 10</li>
+            <li>id - 100</li>
+            <li>atribut - 1000</li>
+        </ul>
+        <p>misol uchun &lt;p class="text" id="number"&gt;:</p>
+        <ul>
+            <li>p - 1</li>
+            <li>.text - 10</li>
+            <li>#number - 100</li>
+        </ul>
+    </div>
+    <div>
+        <p>Agar element ichida element joylashgan bo'lsa, masalan, <i>P</i> tegi ichida <i>.number</i> classi bo'lsa, teg va class ballari qo'shiladi va jami ballga qarab o'rni aniqlanadi</p>
+        <table>
+            <tr class="trhead">
+                <td>Selektor</td>
+                <td>Id</td>
+                <td>class</td>
+                <td>teg</td>
+                <td>jami</td>
+            </tr>
+            <tr>
+                <td>p</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>.byline</td>
+                <td>0</td>
+                <td>10</td>
+                <td>0</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>p.byline</td>
+                <td>0</td>
+                <td>10</td>
+                <td>1</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>#banner</td>
+                <td>100</td>
+                <td>0</td>
+                <td>0</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>#banner p</td>
+                <td>100</td>
+                <td>0</td>
+                <td>1</td>
+                <td>101</td>
+            </tr>
+            <tr>
+                <td>#banner .byline</td>
+                <td>100</td>
+                <td>10</td>
+                <td>0</td>
+                <td>110</td>
+            </tr>
+            <tr>
+                <td>a:link</td>
+                <td>0</td>
+                <td>10</td>
+                <td>1</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>p:first-line</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>h2 strong</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>#weapper #content .byline a:hover</td>
+                <td>200</td>
+                <td>20</td>
+                <td>1</td>
+                <td>221</td>
+            </tr>
+        </table>
+    </div>
+    <a href="test/test.html"><footer>
+        Testga o'tish!
+    </footer></a>
+</body>
+</html>

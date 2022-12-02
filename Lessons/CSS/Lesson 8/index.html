@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block billan ishlash</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Block bilan ishlash</h1>
+    <main>
+        <div>width va height billan blokni eni va boyini berasa bolladi
+            <div class="WandH">
+                Botta <i>width: 190px;</i> va <i>height:30px;</i> berilgan
+            </div>
+            <p>E'tibor berin so'z sig'mi qolgan paytda so'zni pastka tushirib beradi. So'z blokka sig'may qolsa, blokdan tashqariga chiqib ketadi</p>
+            <div class="untext">Ramkamdan chiqib kettim</div>
+            <p><br><i>width:50px;</i> <i>height:60px;</i> Agarda saytingizda qancha so'z yozilishini bilmasangiz, aniq razmer berish to'g'ri ish emas</p>
+        </div>
+        <div>
+            width va height block bo'yi va eni emas, <strong>ular kontent bo'yi va enidur!</strong>
+            <div class="boxsize">
+                Masalan bu blokni olaylik!
+            </div>
+            <p>Tepadagi blokda so'z uchun yetarlicha joy bor, lekin so'z baribir tashqariga chiqib ketgan. Uning sababi <i>width:50px;</i> va <i>height:60px;</i> berilganidadur, bu yerda paddin block razmerini kattalashtirib beryapti, padding razmeri quydagicha<i>padding: 20px 300px</i></p>
+        </div>
+        <div>
+            <p>Konteyner deb border+padding+content(width yoki height) etiladi</p>
+            <div class="I300">
+                Meni enim width:300px;
+            </div>
+            <div class="I300fake">
+                Yo'q meni enim 300px
+            </div>
+            <p>Tepadagi bloklarga 300px width berilgan, lekin ulardan bittasini konteyneri kattaroq, chunki ikkinchisiga ikkta chetdan (<i>padding: 0 20px;</i>) berilgan</p>
+        </div>
+        <div>
+            <p>Blok esa marging ni o'z ichiga oladi. Masalan</p>
+            <div class="papper"><div class="first"></div><div class="second"></div></div>
+            <div class="papperviver">
+                <div class="first"><div></div></div>
+                <div class="second"><div></div></div>
+        </div>
+
+    </main>
+</body>
+</html>
