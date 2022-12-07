@@ -98,6 +98,33 @@ aside{
     margin-top: 100px;
     float:right
 }
+main .bar{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+main .bar a{
+    display: inline-block;
+    width: calc(100%/3);
+}
+main .bar figure.study div{
+    background-size:contain;
+    background-image: url(img/teacher.png);
+    padding-top: 100%;
+}
+main .bar figure.tests div{
+    background-size:contain;
+    background-image: url(img/student.png);
+    padding-top: 100%;
+}
+main .bar figure.helper div{
+    background-size:contain;
+    background-image: url(img/book.png);
+    padding-bottom: 100%;
+}
+.bar figure figcaption{
+    text-align: center;
+}
 /*
 *{
     margin: 0;
