@@ -1,12 +1,17 @@
-@import url(../fonts/fonts.css);
+@import url(fonts/fonts.css);
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 *{
     margin:0;
     padding: 0;
     font-family: 'Times New Roman', Times, serif;
     font-size: 1em;
 }
+body{
+    background: url(img/bg.png) #f9f;
+}
 /* Header */
 header{
+    background: linear-gradient(45deg, #7700ff99, #fed6e3dd);
     margin: auto;
     width: 80%;
     font-size: 1.3em;
@@ -14,15 +19,13 @@ header{
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
 }
-h1,h2{
+h1{
+    font-weight: lighter;
     font-size: 80px;
-    font-family: 'Morning Breeze';
+    font-family: 'Courgette';
     padding: 10px;
     text-align: center;
     color: rgb(140, 0, 255);
-}
-header h2{
-    font-size: 60px;
 }
 /*nav*/
 nav>ul>li{
@@ -78,6 +81,9 @@ nav a{
 /* Main */
 
 main{
+    box-shadow: 8px 8px 9px #000a,
+                -8px -8px 9px #0003;
+    border-radius: 5px 5px 10px 10px;
     margin-top: 40px;
     box-sizing: border-box;
     min-height: 900px;
@@ -85,9 +91,10 @@ main{
 }
 /* main */
 main{
+    background-color: #fdf;
+    border: 2px solid #444;
     margin: 20px auto;
     width: 80%;
-    padding: 20px 10px;
     font-size: 18px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -98,32 +105,39 @@ aside{
     margin-top: 100px;
     float:right
 }
+/* main bar */
 main .bar{
+    margin: 30px 0;
     width: 100%;
     height: auto;
     display: block;
 }
-main .bar a{
+.bar a{
     display: inline-block;
     width: calc(100%/3);
 }
-main .bar figure.study div{
+.bar figure div{
+    background-repeat: no-repeat;
     background-size:contain;
+    padding-top: 100%;
+}
+.bar figure.study div{
     background-image: url(img/teacher.png);
-    padding-top: 100%;
 }
-main .bar figure.tests div{
-    background-size:contain;
+.bar figure.tests div{
     background-image: url(img/student.png);
-    padding-top: 100%;
 }
-main .bar figure.helper div{
-    background-size:contain;
+.bar figure.helper div{
     background-image: url(img/book.png);
-    padding-bottom: 100%;
 }
 .bar figure figcaption{
+    color:#8f00ff;
+    font-size: 36px;
+    font-family: 'Morning Breeze';
     text-align: center;
+}
+.bar figure:hover{
+    transform: scale(1.2);
 }
 /*
 *{
