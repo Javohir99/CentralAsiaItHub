@@ -1,9 +1,9 @@
 @import url(fonts/fonts.css);
-@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 *{
     margin:0;
     padding: 0;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Caudex,Baskerville,'Time New Roman',serif;
+    color:#303;
     font-size: 1em;
 }
 body{
@@ -36,12 +36,8 @@ nav>ul>li{
     list-style: none;
 }
 /*временно*/
-nav ul li:hover{
-    margin: 0;
-}
 nav ul li ul li:hover{
-    padding: 0;
-    font-size: 28px;
+    transform: scale(1.2);
     background-color: blueviolet;
 }
 
@@ -96,10 +92,6 @@ main{
     margin: 20px auto;
     width: 80%;
     font-size: 18px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-main>p{
-    margin: 20px;
 }
 aside{
     margin-top: 100px;
@@ -138,6 +130,15 @@ main .bar{
 }
 .bar figure:hover{
     transform: scale(1.2);
+    text-shadow: 2px 2px 5px #000000dd;
+}
+h2,h3,h4{
+    padding: 20px 0;
+    text-align: center;
+}
+article{
+    padding: 50px;
+    line-height: 30px;
 }
 /*
 *{
