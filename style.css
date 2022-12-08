@@ -6,6 +6,9 @@
     color:#303;
     font-size: 1em;
 }
+a{
+    text-decoration: none;
+}
 body{
     background: url(img/bg.png) #f9f;
 }
@@ -26,6 +29,11 @@ h1{
     padding: 10px;
     text-align: center;
     color: rgb(140, 0, 255);
+}
+h1 a{
+    font-family: inherit;
+    display: inherit;
+    color: inherit;
 }
 /*nav*/
 nav>ul>li{
@@ -132,14 +140,80 @@ main .bar{
     transform: scale(1.2);
     text-shadow: 2px 2px 5px #000000dd;
 }
-h2,h3,h4{
+main.intro h2,main.intro h3,main.intro h4{
     padding: 20px 0;
     text-align: center;
 }
+h2,h3,h4{
+    font-size: 28px;
+    padding: 20px 0 ;
+}
 article{
+    font-size: 25px;
     padding: 50px;
     line-height: 30px;
 }
+/*helper*/
+main h2.header{
+    color: #8f00ff;
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+}
+main div.inline{
+    box-sizing: border-box;
+    padding: 20px 200px;
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}
+main div.inline ul li{
+    font-size: 25px;
+    padding: 5px 0;
+}
+main div.inline ul li:hover a{
+    color: #aa3333;
+}
+main div.inline ul li:hover{
+    margin-left: 20px;
+    transform: scale(1.1);
+    color: #aa3333;
+}
+/* TEST */
+main.test .codeblock{
+    color: #000;
+}
+.quizsection .answer{
+    width: 80%;
+    font-size: 25px;
+    padding: 10px;
+    background: none;
+    border-radius: 10px;
+    border: 2px solid #8f00ff ;
+}
+input[type=radio]{
+    display: none;
+    height: 30px;
+    position: absolute;
+}
+.quizsection{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 *{
     margin: 0;
