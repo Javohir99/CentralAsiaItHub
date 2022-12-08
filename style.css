@@ -180,11 +180,21 @@ main div.inline ul li:hover{
     color: #aa3333;
 }
 /* TEST */
-main.test .codeblock{
-    color: #000;
+main.test{
+    padding: 20px 10%;
+}
+.codeblock{
+    font-size: 28px;
+    padding: 20px;
+    background-color: #fff;
+}
+.codeblock .selectors{
+    font-family: monospace;
+    color: #cc8c16;
 }
 .quizsection .answer{
     width: 80%;
+    margin: 10px auto;
     font-size: 25px;
     padding: 10px;
     background: none;
@@ -193,8 +203,6 @@ main.test .codeblock{
 }
 input[type=radio]{
     display: none;
-    height: 30px;
-    position: absolute;
 }
 .quizsection{
     width: 100%;

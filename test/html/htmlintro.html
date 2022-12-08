@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="../../style.css">
     <script>
         function input(i,n){
+            var element=document.getElementById('result');
+            if(element.textContent == ""){
+
         quiz = document.getElementsByClassName('quizsection');
         answers = quiz[i].getElementsByClassName('answer');
         q = document.forms['quiz'].elements['q'+(i+1)];
-        
             for(j=0;j <= answers.length; j++){
                 if(j == n){
                     q[j].checked = true;
@@ -21,8 +23,8 @@
                     answers[j].style.background = "00000000";
                 }
             }
-
         }
+    }
     </script>
 </head>
 <body>
@@ -91,7 +93,7 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="test">
     <div id="result"></div>
     
     <form name="quiz" action="javascript:check();" class="quizform">
@@ -99,7 +101,7 @@
     <div class="quizsection">
     
     
-        <h2><span class="selectors"> #photo figure figcaption </span> necha ball bo'ladi?</h2>
+        <span class="selectors">1) #photo figure figcaption </span> necha ball bo'ladi?
         
         <div class="answer" onclick="input(0,0)">
             <input name="q1" value="A" id="value1" type="radio" /> 1002
@@ -121,7 +123,7 @@
     
     <div class="quizsection">
     
-        <h2>"Man qizilman" so'zi qaysi rang bo'ladi ?</h2>
+        "Man qizilman" so'zi qaysi rang bo'ladi ?
         <div class="codeblock">
             <code>
             <span class="selectors">&lt;head&gt;</span><br>
@@ -167,7 +169,7 @@
     
     <div class="quizsection">
     
-        <h2>Agar <span class="selectors">p</span> ga rangini sariq bergan bo'lsak va uni ichidagiga <span class="selectors">li</span> ramka bersak, uni ichidagi <span class="selectors">a</span> ni shriftшni <b>20px</b> bersak <span class="selectors">a</span> qaysi xususiyatlarni oladi?</h2>
+        Agar <span class="selectors">p</span> ga rangini sariq bergan bo'lsak va uni ichidagiga <span class="selectors">li</span> ramka bersak, uni ichidagi <span class="selectors">a</span> ni shriftшni <b>20px</b> bersak <span class="selectors">a</span> qaysi xususiyatlarni oladi?
     
         <div class="answer" onclick="input(2,0)">
             <input name="q3" value="A" id="value1" type="radio"/> rangi sariq boladi qolganlari ishlamidi
