@@ -171,12 +171,10 @@ main div.inline ul li{
     font-size: 25px;
     padding: 5px 0;
 }
-main div.inline ul li:hover a{
+main ul.nav li:hover a{
     color: #aa3333;
 }
-main div.inline ul li:hover{
-    margin-left: 20px;
-    transform: scale(1.1);
+main ul.nav li:hover{
     color: #aa3333;
 }
 /* TEST */
@@ -188,14 +186,13 @@ main.test{
     padding: 20px;
     background-color: #fff;
 }
-.codeblock .selectors{
-    font-family: monospace;
+.selectors{
     color: #cc8c16;
 }
 .quizsection .answer{
     width: 80%;
     margin: 10px auto;
-    font-size: 25px;
+    font-size: 19px;
     padding: 10px;
     background: none;
     border-radius: 10px;
@@ -205,7 +202,14 @@ input[type=radio]{
     display: none;
 }
 .quizsection{
+    border-bottom: 1px solid #444;
     width: 100%;
+}
+.codeblock span{
+    font-family: monospace;
+}
+.quest{
+    margin: 30px 0;
 }
 
 
