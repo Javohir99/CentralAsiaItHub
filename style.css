@@ -190,6 +190,7 @@ main.test{
     color: #cc8c16;
 }
 .quizsection .answer{
+    cursor: pointer;
     width: 80%;
     margin: 10px auto;
     font-size: 19px;
@@ -198,11 +199,16 @@ main.test{
     border-radius: 10px;
     border: 2px solid #8f00ff ;
 }
+.quizsection .answer:hover{
+    background:#9f55ff55;
+}
 input[type=radio]{
     display: none;
 }
 .quizsection{
-    border-bottom: 1px solid #444;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #303;
     width: 100%;
 }
 .codeblock span{
