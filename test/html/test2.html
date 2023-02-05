@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Для учеников нашего ученбного центра</title>
+    <link rel="stylesheet" href="../../style.css">
+    <script>
+        function input(i,n){
+            var element=document.getElementById('result');
+            if(element.textContent == ""){
+
+        quiz = document.getElementsByClassName('quizsection');
+        answers = quiz[i].getElementsByClassName('answer');
+        q = document.forms['quiz'].elements['q'+(i+1)];
+            for(j=0;j <= answers.length; j++){
+                if(j == n){
+                    q[j].checked = true;
+                    answers[j].style.background = "#9f55ffaa";
+                }
+                else{
+                    answers[j].style.background = "00000000";
+                }
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <h1><a href="../../index.html">Dilbarim servis</a></h1>
+        <nav>
+            <ul>
+                <li>HTML<ul class="html">
+                    <li><a href="pages/html/a.html">a</a></li>
+                    <li><a href="pages/html/article.html">article</a></li>
+                    <li><a href="pages/html/aside.html">aside</a></li>
+                    <li><a href="pages/html/b.html">b</a></li>
+                    <li><a href="pages/html/body.html">body</a></li>
+                    <li><a href="pages/html/div.html">div</a></li>
+                    <li><a href="pages/html/em.html">em</a></li>
+                    <li><a href="pages/html/figcaption.html">figcaption</a></li>
+                    <li><a href="pages/html/figure.html">figure</a></li>
+                    <li><a href="pages/html/footer.html">footer</a></li>
+                    <li><a href="pages/html/head.html">head</a></li>
+                    <li><a href="pages/html/header.html">header</a></li>
+                    <li><a href="pages/html/hgroup.html">hgroup</a></li>
+                    <li><a href="pages/html/html.html">html</a></li>
+                    <li><a href="pages/html/i.html">i</a></li>
+                    <li><a href="pages/html/img.html">img</a></li>
+                    <li><a href="pages/html/li.html">li</a></li>
+                    <li><a href="pages/html/link.html">link</a></li>
+                    <li><a href="pages/html/main.html">main</a></li>
+                    <li><a href="pages/html/nav.html">nav</a></li>
+                    <li><a href="pages/html/ol.html">ol</a></li>
+                    <li><a href="pages/html/p.html">p</a></li>
+                    <li><a href="pages/html/script.html">script</a></li>
+                    <li><a href="pages/html/section.html">section</a></li>
+                    <li><a href="pages/html/span.html">span</a></li>
+                    <li><a href="pages/html/strong.html">strong</a></li>
+                    <li><a href="pages/html/style.html">style</a></li>
+                    <li><a href="pages/html/table.html">table</a></li>
+                    <li><a href="pages/html/td.html">td</a></li>
+                    <li><a href="pages/html/tr.html">tr</a></li>
+                    <li><a href="pages/html/ul.html">ul</a></li>
+                </ul>
+                </li><li>CSS
+                    <ul class="css">
+                        <li><a href="pages/guide/css/color.html">color</a></li>
+                        <li><a href="pages/guide/css/font-family.html">font-family</a></li>
+                        <li><a href="pages/guide/css/font-size.html">font-size</a></li>
+                        <li><a href="pages/guide/css/font-style.html">font-style</a></li>
+                        <li><a href="pages/guide/css/font-weight.html">font-weight</a></li>
+                        <li><a href="pages/guide/css/text-transform.html">text-transform</a></li>
+                        <li><a href="pages/guide/css/font-variant.html">font-variant</a></li>
+                        <li><a href="pages/guide/css/text-decoration.html">text-decoration</a></li>
+                        <li><a href="pages/guide/css/letter-spacing.html">letter-spacing</a></li>
+                        <li><a href="pages/guide/css/word-spacing.html">word-spacing</a></li>
+                        <li><a href="pages/guide/css/text-shadow.html">text-shadow</a></li>
+                        <li><a href="pages/guide/css/line-height.html">line-height</a></li>
+                        <li><a href="pages/guide/css/text-align.html">text-aligin</a></li>
+                        <li><a href="pages/guide/css/text-indent.html">text-indent</a></li>
+                        <li><a href="pages/guide/css/list-style-type.html">list-style-type</a></li>
+                        <li><a href="pages/guide/css/list-style-position.html">list-style-position</a></li>
+                        <li><a href="pages/guide/css/list-style-image.html">list-style-image</a></li>
+                        <li><a href="pages/guide/css/::first-line.html">::first-line</a></li>
+                        <li><a href="pages/guide/css/::first-letter.html">::first-letter</a></li>
+                        <li><a href="pages/guide/css/@font-face">@font-face</a></li>
+                        <li><a href="pages/guide/css/@import">@import</a></li> 
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="test">
+    <div id="result"></div>
+    
+    <form name="quiz" action="javascript:check();" class="quizform">
+    
+    <div class="quizsection">
+    
+    
+        <div class="quest">1) <span class="selectors">:visited</span>psevdaklassi qachon ishlatiladi?</div>
+        
+        <div class="answer" onclick="input(0,0)">
+            <input name="q1" value="A" id="value1" type="radio" /> A. Kirilgan havolalar uchun
+        </div>
+    
+        <div class="answer" onclick="input(0,1)">
+            <input name="q1" value="B" id="value2" type="radio" /> B. Kirilmagan havolalar uchun
+        </div>
+    
+        <div class="answer" onclick="input(0,2)">
+            <input name="q1" value="C" id="value3" type="radio" /> C. Bosilgan payti
+        </div>
+    
+        <div class="answer" onclick="input(0,3)">
+            <input name="q1" value="D" id="value4" type="radio" /> D. Mishka oldiga olib kelingan payti
+        </div>
+        
+    </div>
+    
+    <div class="quizsection">
+    
+        <div class="quest">2) <span class="selectors">:link</span> psevdaklassi qachon ishlatiladi?</div>
+        <div class="answer" onclick="input(1,0)">
+            <input name="q2" value="A" id="value1" type="radio" /> A. Kirilgan havolalar uchun
+        </div>
+    
+        <div class="answer" onclick="input(1,1)">
+            <input name="q2" value="B" id="value2" type="radio" /> B. Kirilmagan havolalar uchun
+        </div>
+    
+        <div class="answer" onclick="input(1,2)">
+            <input name="q2" value="C" id="value3" type="radio" /> C. Bosilgan payti
+        </div>
+    
+        <div class="answer" onclick="input(1,3)">
+            <input name="q2" value="D" id="value4" type="radio" /> D. Mishka oldiga olib kelingan payti
+        </div>
+    
+    </div>
+    
+    <div class="quizsection">
+    
+        <div class="quest">3) <span class="selectors">:hover</span> psevdaklassi qachon ishlatiladi?</div>
+    
+        <div class="answer" onclick="input(2,0)">
+            <input name="q3" value="A" id="value1" type="radio"/>A. Kirilgan havolalar uchun
+        </div>
+    
+        <div class="answer" onclick="input(2,1)">
+            <input name="q3" value="B" id="value2" type="radio" />B. Kirilmagan havolalar uchun  
+        </div>
+    
+        <div class="answer" onclick="input(2,2)">
+            <input name="q3" value="C" id="value3" type="radio" />C. Bosilgan payti
+        </div>
+    
+        <div class="answer" onclick="input(2,3)">
+            <input name="q3" value="D" id="value4" type="radio" />D. Mishka oldiga olib kelingan payti
+        </div>
+    
+    </div>
+    <div class="quizsection">
+    
+        <div class="quest">4) <span class="selectors">:active</span> psevdaklassi qachon ishlatiladi?</div>
+    
+        <div class="answer" onclick="input(3,0)">
+            <input name="q4" value="A" id="value1" type="radio"/>A. Kirilgan havolalar uchun
+        </div>
+    
+        <div class="answer" onclick="input(3,1)">
+            <input name="q4" value="B" id="value2" type="radio" />B. Kirilmagan havolalar uchun  
+        </div>
+    
+        <div class="answer" onclick="input(3,2)">
+            <input name="q4" value="C" id="value3" type="radio" />C. Bosilgan payti
+        </div>
+    
+        <div class="answer" onclick="input(3,3)">
+            <input name="q4" value="D" id="value4" type="radio" />D. Mishka oldiga olib kelingan payti
+        </div>
+    
+    </div>
+    <div class="quizsection">
+    
+        <div class="quest">5) <span class="selectors"> &lt;p&gt;Bu &lt;b&gt;&lt;i&gt;so'z&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;</span> quyidagi css kodni ishlatganda yotqizilgan qalin yoziq qaysi rangda bo'ladi?</div>
+        <div class="codeblolck">P { color: green; }<br>
+            B {color: blue; }<br>
+            I {color: orange; }<br>
+            B > I { color: olive; }<br>
+            P > I { color: yellow; }</div>
+        <div class="answer" onclick="input(4,0)">
+            <input name="q5" value="A" id="value1" type="radio"/>A. Oranjevi
+        </div>
+    
+        <div class="answer" onclick="input(4,1)">
+            <input name="q5" value="B" id="value2" type="radio" />B. ko'k
+        </div>
+    
+        <div class="answer" onclick="input(4,2)">
+            <input name="q5" value="C" id="value3" type="radio" />C. olivka
+        </div>
+    
+        <div class="answer" onclick="input(4,3)">
+            <input name="q5" value="D" id="value4" type="radio" />D. sariq
+        </div>
+    
+    </div>
+    <div class="quizsection">
+    
+        <div class="quest">6) Css komentariya qanaqa qilib yoziladi?</div>
+    
+        <div class="answer" onclick="input(5,0)">
+            <input name="q6" value="A" id="value1" type="radio"/>A. &lt;!-- это комментарий --&gt;
+        </div>
+    
+        <div class="answer" onclick="input(5,1)">
+            <input name="q6" value="B" id="value2" type="radio" />B. /* это комментарий */
+        </div>
+    
+        <div class="answer" onclick="input(5,2)">
+            <input name="q6" value="C" id="value3" type="radio" />C. ' это комментарий
+        </div>
+        <div class="answer" onclick="input(5,3)">
+            <input name="q6" value="D" id="value4" type="radio" />D. // это комментарий
+        </div>
+    
+    </div>
+    <div class="quizsection">
+    
+        <div class="quest">7)  Flex ishlatilinayotganda elementlarning ketma ketligini qaysi xususiyat bilan o'zgartiriladi?
+    
+        <div class="answer" onclick="input(6,0)">
+            <input name="q7" value="A" id="value1" type="radio"/>A. align-item
+        </div>
+    
+        <div class="answer" onclick="input(6,1)">
+            <input name="q7" value="B" id="value2" type="radio" />B. order
+        </div>
+    
+        <div class="answer" onclick="input(6,2)">
+            <input name="q7" value="C" id="value3" type="radio" />C. justify content
+        </div>
+    
+        <div class="answer" onclick="input(6,3)">
+            <input name="q7" value="D" id="value4" type="radio" />D. flex-basis
+        </div>
+    
+    </div>
+    <div class="quizsection">
+    
+        <div class="quest">8) flex hususiyati qaysi xususiytlarni oz ichiga oladi?
+    
+        <div class="answer" onclick="input(7,0)">
+            <input name="q8" value="A" id="value1" type="radio"/>A. flex: flex-direction flex-basis flex-flow
+        </div>
+    
+        <div class="answer" onclick="input(7,1)">
+            <input name="q8" value="B" id="value2" type="radio" />B. flex: flex-grow flex-flow flex-basis
+        </div>
+    
+        <div class="answer" onclick="input(7,2)">
+            <input name="q8" value="C" id="value3" type="radio" />C. flex: flex-grow flex-shrink flex-basis
+        </div>
+    
+        <div class="answer" onclick="input(7,3)">
+            <input name="q8" value="D" id="value4" type="radio" />D. flex: flex-grow flex-direction flex-basis
+        </div>
+    
+    </div>
+    <div class="quizsection">
+    
+        <div class="quest">9) flex-grow nmaga ishlatilinadi? </div>
+    
+        <div class="answer" onclick="input(8,0)">
+            <input name="q9" value="A" id="value1" type="radio"/>A. flex elementlar flex konteynerni joyini toldirish uchun
+        </div>
+    
+        <div class="answer" onclick="input(8,1)">
+            <input name="q9" value="B" id="value2" type="radio" />B. flex konteynerda joy yetmi qolganda flex elementlarni qisqartirsih uchun
+        </div>
+    
+        <div class="answer" onclick="input(8,2)">
+            <input name="q9" value="C" id="value3" type="radio" />C. flex elementlari tepadan yoki pastan joylashtirish uchun
+        </div>
+    
+        <div class="answer" onclick="input(8,3)">
+            <input name="q9" value="D" id="value4" type="radio" />D. flex elementlarni ongda yoki chaptan joylash uchun
+        </div>
+    
+    </div>
+    <div class="quizsection">
+    
+        <div class="quest">10) Flex elementlarni bo'yiga joylash uchun qaysi xususiyat to'g'ri keladi?</div>
+    
+        <div class="answer" onclick="input(9,0)">
+            <input name="q10" value="A" id="value1" type="radio"/>A. flex: column;
+        </div>
+    
+        <div class="answer" onclick="input(9,1)">
+            <input name="q10" value="B" id="value2" type="radio" />B. aligen-item: column;
+        </div>
+    
+        <div class="answer" onclick="input(9,2)">
+            <input name="q10" value="C" id="value3" type="radio" />C. flex-direction: column;
+        </div>
+    
+        <div class="answer" onclick="input(9,3)">
+            <input name="q10" value="D" id="value4" type="radio" />D. justify-content: column;
+        </div>
+    
+    </div>
+    <div class="quizsection">
+        <div class="quest">11) Flex element konteynerni bo'yini to'ldirib turishi uchun quydagilardan qaysi biri to'g'ri keladi?</div>
+    
+        <div class="answer" onclick="input(10,0)">
+            <input name="q11" value="A" id="value1" type="radio"/>A. align-items: stretch;
+        </div>
+    
+        <div class="answer" onclick="input(10,1)">
+            <input name="q11" value="B" id="value2" type="radio" />B. align-content: space-between;
+        </div>
+    
+        <div class="answer" onclick="input(10,2)">
+            <input name="q11" value="C" id="value3" type="radio" />C. justify-content: space-between;
+        </div>
+    
+        <div class="answer" onclick="input(10,3)">
+            <input name="q11" value="D" id="value4" type="radio" />D. align-items: baseline;
+        </div>
+    </div>
+    <div class="quizsection">
+    
+        <div class="quest">12) Flex elementlarga joy yetmay qolganda pastga tushishi uchun qaysi xususiyat qo'llaniladi?</div>
+    
+        <div class="answer" onclick="input(11,0)">
+            <input name="q12" value="A" id="value1" type="radio"/>A.  nowrap
+        </div>
+    
+        <div class="answer" onclick="input(11,1)">
+            <input name="q12" value="B" id="value2" type="radio" />B. flex-end
+        </div>
+    
+        <div class="answer" onclick="input(11,2)">
+            <input name="q12" value="C" id="value3" type="radio" />C. wrap
+        </div>
+    
+        <div class="answer" onclick="input(11,3)">
+            <input name="q12" value="D" id="value4" type="radio" />D. wrap-reverse
+        </div>
+    
+    </div>
+    <div class="quizsection">
+    
+        <div class="quest">13) Quydagilardan qaysi biri blokning tepasidagi tashqarisidagi joyni o'zgartiradi?</div>
+    
+        <div class="answer" onclick="input(12,0)">
+            <input name="q13" value="A" id="value1" type="radio"/>A. margin-top
+        </div>
+    
+        <div class="answer" onclick="input(12,1)">
+            <input name="q13" value="B" id="value2" type="radio" />B. margin
+        </div>
+    
+        <div class="answer" onclick="input(12,2)">
+            <input name="q13" value="C" id="value3" type="radio" />C. padding-top
+        </div>
+    
+        <div class="answer" onclick="input(12,3)">
+            <input name="q13" value="D" id="value4" type="radio" />D. margin-bottom
+        </div>
+    
+    </div>
+    <div class="quizsection">
+    
+        <div class="quest">14) Quydagilardan qaysi biri blokning o'ng tarafidagi ichkaridagi joyini o'zgartiradi?</div>
+    
+        <div class="answer" onclick="input(13,0)">
+            <input name="q14" value="A" id="value1" type="radio"/>A. padding-top
+        </div>
+    
+        <div class="answer" onclick="input(13,1)">
+            <input name="q14" value="B" id="value2" type="radio" />B. padding-right
+        </div>
+    
+        <div class="answer" onclick="input(13,2)">
+            <input name="q14" value="C" id="value3" type="radio" />C. margin-right
+        </div>
+    
+        <div class="answer" onclick="input(13,3)">
+            <input name="q14" value="D" id="value4" type="radio" />D. padding-bottom
+        </div>
+    
+    </div>
+    <div class="quizsection">
+    
+        <div class="quest">15) Agar : margin 10px 8px 15px 9px bo'lsa blok pasidagi joy qancha</div>
+    
+        <div class="answer" onclick="input(14,0)">
+            <input name="q15" value="A" id="value1" type="radio"/>A. 10px
+        </div>
+    
+        <div class="answer" onclick="input(14,1)">
+            <input name="q15" value="B" id="value2" type="radio" />B. 8px
+        </div>
+    
+        <div class="answer" onclick="input(14,2)">
+            <input name="q15" value="C" id="value3" type="radio" />C. 15px
+        </div>
+    
+        <div class="answer" onclick="input(14,3)">
+            <input name="q15" value="D" id="value4" type="radio" />D. 9px
+        </div>
+    
+    </div>
+    <div class="quizsection">
+    
+        <div class="quest">16) Agar &lt;div id="test">&gt;Text&lt;/div&gt; bo'lsa, quyidagilardan qaysi biri to'g'ri </div>
+    
+        <div class="answer" onclick="input(15,0)">
+            <input name="q16" value="A" id="value1" type="radio"/>A. *{}
+        </div>
+    
+        <div class="answer" onclick="input(15,1)">
+            <input name="q16" value="B" id="value2" type="radio" />B. div.test
+        </div>
+    
+        <div class="answer" onclick="input(15,2)">
+            <input name="q16" value="C" id="value3" type="radio" />C. .test{}
+        </div>
+    
+        <div class="answer" onclick="input(15,3)">
+            <input name="q16" value="D" id="value4" type="radio" />D. #test{}
+        </div>
+    
+    </div>
+    <div class="quizsection">
+    
+        <div class="quest">17) Ramkaning qalinligini qaysi xususiyat orqali o'zgartiriladi?</div>
+    
+        <div class="answer" onclick="input(16,0)">
+            <input name="q17" value="A" id="value1" type="radio"/>A. border-style
+        </div>
+    
+        <div class="answer" onclick="input(16,1)">
+            <input name="q17" value="B" id="value2" type="radio" />B. border-width
+        </div>
+    
+        <div class="answer" onclick="input(16,2)">
+            <input name="q17" value="C" id="value3" type="radio" />C. border-weight
+        </div>
+    
+        <div class="answer" onclick="input(16,3)">
+            <input name="q17" value="D" id="value4" type="radio" />D. border-color
+        </div>
+    
+    </div>
+    <div class="quizsection">
+    
+        <div class="quest">18) So'zni yotqizilgan holatga o'tkazish uchun quyidagilardan qaysinisi to'g'ri keladi?</div>
+    
+        <div class="answer" onclick="input(17,0)">
+            <input name="q18" value="A" id="value1" type="radio"/>A. Font-family
+        </div>
+    
+        <div class="answer" onclick="input(17,1)">
+            <input name="q18" value="B" id="value2" type="radio" />B. Text-weight
+        </div>
+    
+        <div class="answer" onclick="input(17,2)">
+            <input name="q18" value="C" id="value3" type="radio" />C. Font-style
+        </div>
+    
+        <div class="answer" onclick="input(17,3)">
+            <input name="q18" value="D" id="value4" type="radio" />D. Font-weight
+        </div>
+    
+    </div>
+    <div class="quizsection">
+    
+        <div class="quest">19) <span class="selectors">width:500px; height:200px; padding: 20px 30px; border-left:15px</span> bo'lsa blokni eni necha pixel bo'ladi?</div>
+    
+        <div class="answer" onclick="input(18,0)">
+            <input name="q19" value="A" id="value1" type="radio"/>A. 275 px
+        </div>
+    
+        <div class="answer" onclick="input(18,1)">
+            <input name="q19" value="B" id="value2" type="radio" />B. 575 px
+        </div>
+    
+        <div class="answer" onclick="input(18,2)">
+            <input name="q19" value="C" id="value3" type="radio" />C. 545px
+        </div>
+    
+        <div class="answer" onclick="input(18,3)">
+            <input name="q19" value="D" id="value4" type="radio" />D. 255px
+        </div>
+    
+    </div>
+
+     <!-- finish button -->
+    <div>
+    <input value="Finish" type="submit" class="submit">
+</div>
+    </form>
+    
+    </section>
+    
+    <script type="text/javascript">
+           
+       function check()
+    
+       {
+        var result = 0; 
+        var question;
+          
+          
+        question = 0;
+        values = new Array();
+        values = [
+        'A',
+        'B',
+        'D',
+        'C',
+        'C',
+        'B',
+        'B',
+        'C',
+        'A',
+        'C',
+        'A',
+        'C',
+        'A',
+        'B',
+        'C',
+        'D',
+        'B',
+        'C',
+        'B'
+    ];
+        
+          for (question = 1; question <= values.length; question++) {
+                var q = document.forms['quiz'].elements['q'+question];
+                var quizsection = document.body.getElementsByClassName('quizsection');
+                var answer = quizsection[question-1].getElementsByClassName('answer');
+            for (var i = 0; i < q.length; i++) { 
+                if(q[i].checked){
+                        if(q[i].value == values[question-1]){
+                            result = result+1;
+                            answer[i].style.border = "3px green solid"; 
+                        }
+                        else{
+                            answer[i].style.border = "3px red solid";
+                        }
+                    }
+                    else if(q[i].value == values[question-1]){
+                        answer[i].style.border = "3px green solid";
+                    }
+                }
+            }
+            inputs = document.getElementsByTagName("input");
+            divresult = document.getElementById("result");
+            divresult.scrollIntoView({block: "end"});
+            divresult.innerHTML = "Tog'ri javoblar soni:" + result+"/"+values.length;
+            for(i = 0; i <= inputs.length; i++){
+                inputs[i].setAttribute('type', 'hidden');
+            }
+
+            
+            
+
+
+
+
+          
+          /*
+          result = "";
+          trues = 2;  
+          let choice = 0;
+          
+          for (question = 1; question <= 3; question++) {
+          
+             var q = document.forms['quiz'].elements['q'+question];
+    
+                for (var i = 0; i < q.length; i++) {
+                   if (q[i].checked) {
+                      choice = choice + Number(q[i].value);
+                   }
+                }
+             }
+          window.location = 'ocenka' + choice + '.html';*/
+       }
+    
+    // ]]></script>
+    </main>
+    <footer>
+        Saytning oxirgi o'zgartiruvi <time datetime="2022-11-27">27.11.2022</time>
+    </footer>
+</body>
+</html>
